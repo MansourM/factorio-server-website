@@ -1,0 +1,15 @@
+# IDEs & Editors
+/.idea
+/.vscode
+/.zed
+/.cursor
+/.kiro
+
+# IntelliJ
+*.iml
+
+temp
+
+# Factorio Mods (large zip files, users should download their own)
+mods/*
+!mods/.gitkeep

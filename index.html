@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Factorio Server - Friends Only</title>
+<link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+<link rel="stylesheet" href="assets/style.css?v=202604281210">
+</head>
+<body>
+
+<div class="header-stripe"></div>
+<header>
+  <div class="header-inner">
+    <img src="assets/factorio-gear.png" alt="Gear" class="gear-icon">
+    <div class="header-text">
+      <h1>Factorio Server</h1>
+      <div class="subtitle">Private — Friends Only</div>
+    </div>
+    <div class="status-pill">
+      <div class="pulse"></div>
+      Server Online
+    </div>
+  </div>
+</header>
+
+<div class="page">
+
+  <!-- SERVER INFO -->
+  <div class="section">
+    <div class="section-title">Server Information</div>
+    <div class="info-grid">
+      <div class="info-card">
+        <div class="label">Server Address</div>
+        <div class="value" id="serverAddress">YOUR_SERVER_IP:YOUR_PORT</div>
+      </div>
+      <div class="info-card">
+        <div class="label">Game Version</div>
+        <div class="value" id="gameVersion">2.0.76</div>
+      </div>
+      <div class="info-card">
+        <div class="label" id="serverStartLabel">Starts In</div>
+        <div class="value" id="serverStartDate">2026-05-01</div>
+      </div>
+      <div class="info-card">
+        <div class="label">Game Download</div>
+        <a class="value" id="gameDownloadLink" href="https://factorio.com/" target="_blank">Download Game</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODS -->
+  <div class="section">
+    <div class="section-title">Approved Mods</div>
+    <div class="section-desc">
+      These are the only mods allowed on the server. Some mods unlock over time as the server progresses. Players are responsible for following the unlock schedule.
+    </div>
+
+    <div class="learning-box" style="margin-bottom: 20px;">
+      <h4>How to Install Mods</h4>
+      <p>Download the mod files and place them in your Factorio mods folder:</p>
+      <ul>
+        <li>Windows: <code>%appdata%\Factorio\mods\</code></li>
+        <li>Download the .zip files from the links below</li>
+        <li>Copy the .zip files directly to the mods folder (don't extract them)</li>
+        <li>Restart Factorio if it's running</li>
+      </ul>
+    </div>
+
+    <div class="tier-block">
+      <div class="tier-header">
+        <span class="tier-badge starter">Starter</span>
+        <span class="tier-desc">QoL improvements that don't change core gameplay. Safe for new players.</span>
+      </div>
+      <div class="item-list" id="starterMods"></div>
+    </div>
+
+    <div class="tier-block">
+      <div class="tier-header">
+        <span class="tier-badge inter">Intermediate</span>
+        <span class="tier-desc">Helpful tools and info displays. Recommended once you know the basics.</span>
+      </div>
+      <div class="item-list" id="intermediateMods"></div>
+    </div>
+
+    <div class="tier-block">
+      <div class="tier-header">
+        <span class="tier-badge advanced">Advanced</span>
+        <span class="tier-desc">Complex planning and calculation tools. For experienced players.</span>
+      </div>
+      <div class="item-list" id="advancedMods"></div>
+    </div>
+  </div>
+
+  <!-- BLUEPRINTS -->
+  <div class="section">
+    <div class="section-title">Approved Blueprints</div>
+    <div class="section-desc">
+      Only blueprints from this list are allowed. We want everyone to experience building and problem-solving together, so we've limited it to blueprints that help with specific technical challenges rather than complete base designs.
+    </div>
+
+    <div class="learning-box" style="margin-bottom: 20px;">
+      <h4>How to Import Blueprints</h4>
+      <ul>
+        <li>Click "Copy Blueprint String" button below</li>
+        <li>In Factorio, open your inventory (E key)</li>
+        <li>Click the Blueprint Library button (book icon)</li>
+        <li>Click "Import string" button</li>
+        <li>Paste the blueprint string (Ctrl+V) and confirm</li>
+      </ul>
+    </div>
+
+    <div class="item-list" id="blueprintsList"></div>
+    <div class="learning-box" style="margin-top: 20px;">
+      <h4>Learning Resources</h4>
+      <p>Helpful guides if you want to design your own builds:</p>
+      <ul>
+        <li><a href="https://www.youtube.com/c/Nilaus" target="_blank">Nilaus YouTube Channel</a> — excellent tutorials</li>
+        <li><a href="https://wiki.factorio.com" target="_blank">Official Factorio Wiki</a> — comprehensive reference</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- RULES -->
+  <div class="section">
+    <div class="section-title">Server Rules</div>
+    <ul class="rules-list">
+      <li>Have fun!</li>
+      <li>Only use mods and blueprints from the approved lists above</li>
+      <li>Follow the unlock schedule for time-locked items</li>
+      <li>Communicate before major changes to shared infrastructure</li>
+    </ul>
+  </div>
+
+  <footer>Questions? Contact the server admin.</footer>
+</div>
+
+<script src="assets/config.js?v=202604281200"></script>
+<script src="assets/script.js?v=202604281200"></script>
+</body>
+</html>
