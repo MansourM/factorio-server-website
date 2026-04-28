@@ -1,119 +1,73 @@
 # Factorio Server Website
 
-Simple, self-contained single-page website for your private Factorio server.
+A clean, self-contained website for managing your private Factorio server's approved mods and blueprints. Perfect for keeping friends organized with a time-based unlock system that gradually introduces QoL mods as players learn the game.
+
+**🔗 [Live Demo](https://mansourm.github.io/factorio-server-website/)**
 
 ## Features
 
-- ✅ Self-contained (no external CDNs)
-- 📦 Mod list with descriptions and download links
-- 🔒 Time-based unlock system (client-side, honor system)
-- 📐 Approved blueprints section
-- 📱 Responsive design
-- 🎨 Dark theme optimized for gaming
+- 📦 **Curated Mod List** - Approved mods organized by difficulty (Starter/Intermediate/Advanced)
+- 🔒 **Time-Based Unlocks** - Mods unlock progressively based on server start date
+- 📐 **Blueprint Library** - Approved blueprints with copy-to-clipboard functionality
+- 📱 **Responsive Design** - Works on desktop and mobile
+- 🎨 **Factorio-Themed** - Dark theme optimized for gaming
+- ✅ **Self-Contained** - No external dependencies, works offline
 
-## Configuration
+## Quick Start
 
-Edit `config.js` to configure everything:
+1. **Edit `assets/config.js`** - Update server info and mod list
+2. **Deploy** - Upload to any web server or use GitHub Pages
+3. **Share** - Send the link to your players
+
+### Configuration
+
+Edit `assets/config.js`:
 
 ```javascript
-const FACTORIO_DATA = {
-  "serverConfig": {
-    "serverStartDate": "2025-01-01",  // Change to your actual server start date
-    "serverAddress": "YOUR_SERVER_IP:YOUR_PORT",  // Update with actual game port
-    "modsBaseUrl": "http://YOUR_SERVER_IP:YOUR_WEB_PORT/game/factorio/mods/"
-  },
-  "mods": [
-    {
-      "name": "even-distribution",
-      "file": "even-distribution_2.0.2.zip",
-      "category": "starter",  // starter, intermediate, or advanced
-      "short": "Short description",
-      "description": "Full description",
-      "cooldownDays": 0,  // Days after server start before mod unlocks
-      "modPortalUrl": "https://mods.factorio.com/mod/even-distribution"
-    }
-  ]
+"serverConfig": {
+  "serverStartDate": "2026-05-01",           // Your server start date
+  "serverAddress": "YOUR_SERVER_IP:PORT",    // Game server address
+  "gameDownloadUrl": "https://factorio.com/",
+  "modsBaseUrl": "http://YOUR_SERVER_IP:PORT/mods/"  // Where mod files are hosted
 }
 ```
 
-### Key Configuration Options:
+### Adding/Removing Mods
 
-- `serverStartDate`: Date when server started (YYYY-MM-DD format)
-- `serverAddress`: Game server address players connect to
-- `modsBaseUrl`: Base URL where mod files are hosted
-- `cooldownDays`: Individual cooldown for each mod (0 = available immediately)
-- `category`: Groups mods in the UI (starter/intermediate/advanced)
+Edit the `mods` array in `assets/config.js`. Each mod has:
+- `unlockCooldownDays`: Days after server start before unlock (0 = immediate)
+- `playerDifficultyCategory`: `starter`, `intermediate`, or `advanced`
 
-## Deployment
+### Adding Blueprints
 
-1. Upload all files to your server:
-   - `index.html`
-   - `style.css`
-   - `script.js`
-   - `config.js`
+Edit the `blueprints` array in `assets/config.js`. Include blueprint strings for copy-paste functionality.
 
-2. Place in your web server directory (e.g., nginx) serving `http://YOUR_SERVER_IP:YOUR_WEB_PORT/game/factorio/`
+## Deployment Options
 
-3. Ensure mods are accessible at `http://YOUR_SERVER_IP:YOUR_WEB_PORT/game/factorio/mods/`
+**GitHub Pages** (Free):
+1. Push to GitHub
+2. Settings → Pages → Deploy from `main` branch
+3. Done! Site live at `https://USERNAME.github.io/REPO_NAME/`
 
-## Mod Categories
-
-- **Starter Friendly**: QoL improvements, available based on individual cooldowns
-- **Intermediate**: Information and planning tools, typically 7-10 day cooldowns
-- **Advanced**: Complex calculators, typically 14+ day cooldowns
-
-Each mod has its own cooldown timer that starts from the server start date.
-
-## Customization
-
-### Change Mod Cooldowns
-
-Edit the `cooldownDays` value for any mod in `config.js`:
-
-```javascript
-{
-  "name": "helmod",
-  "cooldownDays": 14  // Change this number
-}
-```
-
-### Add/Remove Mods
-
-Add or remove mod entries in the `mods` array in `config.js`:
-
-```javascript
-{
-  "name": "new-mod",
-  "file": "new-mod_1.0.0.zip",
-  "category": "starter",
-  "short": "Brief description",
-  "description": "Full description here",
-  "cooldownDays": 5,
-  "modPortalUrl": "https://mods.factorio.com/mod/new-mod"
-}
-```
-
-### Update Blueprint Links
-
-Edit the blueprint section in `index.html` to add your own blueprint codes or links.
+**Self-Hosted**:
+- Upload files to any web server (nginx, Apache, etc.)
+- No build step required - pure HTML/CSS/JS
 
 ## File Structure
 
 ```
-.
-├── index.html         # Main HTML structure
-├── style.css          # All styling (no external dependencies)
-├── script.js          # Logic for loading and displaying mods
-├── config.js          # Server config and mod database (EDIT THIS)
-└── README.md          # This file
+├── index.html              # Main page
+├── assets/
+│   ├── config.js          # Server config & mod/blueprint data (EDIT THIS)
+│   ├── script.js          # UI logic
+│   └── style.css          # Styling
+├── mods/                  # Place mod .zip files here (gitignored)
+└── README.md
 ```
 
 ## Notes
 
-- All fonts use system fonts (no web fonts needed)
-- Each mod has individual cooldown timer starting from server start date
-- Unlock system is client-side and relies on player honor system
-- Mod descriptions sourced from official Factorio mod portal
-- Links to official mod portal pages included for each mod
-- Compatible with Factorio 2.0.76
-- All configuration in `config.js` for easy editing (no CORS issues)
+- Compatible with Factorio 2.0 (Space Age)
+- Unlock system is client-side (honor system)
+- Mod files are not included.
+- All configuration in one file (`assets/config.js`)
