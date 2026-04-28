@@ -170,50 +170,7 @@ const FACTORIO_DATA = {
       "unlockCooldownDays": 3,
       "modPortalUrl": "https://mods.factorio.com/mod/BottleneckLite"
     },
-    {
-      "modName": "FNEI",
-      "modFileName": "FNEI_0.4.6.zip",
-      "playerDifficultyCategory": "intermediate",
-      "factorioModPortalCategory": "Utilities",
-      "factorioModPortalTags": [],
-      "summaryDescription": "Recipe and usage lookup tool",
-      "fullDescription": "Factorio NEI mod. This mod will help you find all the recipes to create the selected item. Also you can see the use of the selected item. Recipe information for the item or liquid contains: Name and icon for recipe, Recipe switching panel if there are several, Ingredients and results for the recipe, buildings in which this recipe can be installed, What technologies open this recipe. You can open the mod by clicking on the FNEI button in the upper left corner or by pressing ctrl + E.",
-      "unlockCooldownDays": 3,
-      "modPortalUrl": "https://mods.factorio.com/mod/FNEI"
-    },
-    {
-      "modName": "RecipeBook",
-      "modFileName": "RecipeBook_4.0.8.zip",
-      "playerDifficultyCategory": "intermediate",
-      "factorioModPortalCategory": "Utilities",
-      "factorioModPortalTags": [],
-      "summaryDescription": "Comprehensive recipe browser with filtering",
-      "fullDescription": "Recipe Book is a compendium of information about recipes, materials, and machines, with advanced filtering options. It is similar to the Factoriopedia, but includes advanced filtering options and mod settings to customize your workflow. It is particularly beneficial in large modpacks such as Pyanodons. It is recommended that you disable \"Open Factoriopedia\" in the controls menu so that alt+click will open things in Recipe Book instead.",
-      "unlockCooldownDays": 3,
-      "modPortalUrl": "https://mods.factorio.com/mod/RecipeBook"
-    },
-    {
-      "modName": "YARM",
-      "modFileName": "YARM_1.0.5.zip",
-      "playerDifficultyCategory": "intermediate",
-      "factorioModPortalCategory": "Utilities",
-      "factorioModPortalTags": ["Mining"],
-      "summaryDescription": "Resource site monitor and tracker",
-      "fullDescription": "YARM - Resource Monitor. This mod helps you to keep track of your mining sites, with useful data such as the percent mined, and estimated time to depletion. Use the shortcut button \"Resource monitor\" to drag-select at least one ore entity in a patch (like using a blueprint). If everything went well, you should now see a blue overlay showing up on top of the ore(s) you clicked, and growing as YARM finds their neighbours until the entire ore patch has been scanned. Sites can be renamed at any time. Endless resources (by default, oil, but mods exist for others) are supported.",
-      "unlockCooldownDays": 5,
-      "modPortalUrl": "https://mods.factorio.com/mod/YARM"
-    },
-    {
-      "modName": "resourcehighlighter-dark",
-      "modFileName": "resourcehighlighter-dark_3.0.0.zip",
-      "playerDifficultyCategory": "intermediate",
-      "factorioModPortalCategory": "Utilities",
-      "factorioModPortalTags": [],
-      "summaryDescription": "Map resource highlighter with glowing labels",
-      "fullDescription": "This mod looks for resources in areas that you've charted and highlights them on the map using a highly visible glowing lables. Press SHIFT+H (or the key you've configured) to open the menu. Features: Select one or more resources to display from a list (the mod automatically detects all modded resources), See which machine is required to mine each resource and which item or fluid it gives you, Highlight resources quickly because the mod iterates through chunks that it's already scanned instead of finding entities, Set a minimum amount threshold (the mod won't display resource patches below this amount). For this mod to work, you need to enable map labels.",
-      "unlockCooldownDays": 5,
-      "modPortalUrl": "https://mods.factorio.com/mod/resourcehighlighter-dark"
-    },
+
     {
       "modName": "resourceMarker",
       "modFileName": "resourceMarker_0.8.33.zip",
@@ -225,16 +182,17 @@ const FACTORIO_DATA = {
       "unlockCooldownDays": 0,
       "modPortalUrl": "https://mods.factorio.com/mod/resourceMarker"
     },
+
     {
-      "modName": "PipeVisualizer-Updated",
-      "modFileName": "PipeVisualizer-Updated_2.4.4.zip",
+      "modName": "Automatic_Train_Painter",
+      "modFileName": "Automatic_Train_Painter_2.0.1.zip",
       "playerDifficultyCategory": "intermediate",
-      "factorioModPortalCategory": "Utilities",
-      "factorioModPortalTags": [],
-      "summaryDescription": "Visualize fluid networks",
-      "fullDescription": "Visualize the layout and fluids in Factorio pipe networks. Press Y to draw the selected entity's fluid systems. Press Shift + Y to draw all visible fluid systems. Press Alt + Y to automatically visualize systems on mouse-over. Press Control + Y to toggle between color-by-fluid and color-by-system.",
-      "unlockCooldownDays": 3,
-      "modPortalUrl": "https://mods.factorio.com/mod/PipeVisualizer-Updated"
+      "factorioModPortalCategory": "Tweaks",
+      "factorioModPortalTags": ["Trains"],
+      "summaryDescription": "Auto-color trains by cargo",
+      "fullDescription": "Trains will automatically be colored, based on the contents of their inventory, as soon as they begin to move in Automatic Mode. Note: this requires the \"Use destination train stop color\" checkbox in the locomotive GUI to be unticked, otherwise the train will follow the new built-in destination stop coloring behavior. Item colors are based on their icons, while fluid colors are based on their appearance in pipes, storage tanks, and barrels. If a train's inventory contains multiple entities, their colors will be blended proportionally to the quantity of each entity present.",
+      "unlockCooldownDays": 7,
+      "modPortalUrl": "https://mods.factorio.com/mod/Automatic_Train_Painter"
     },
     {
       "modName": "FilterHelper",
@@ -246,17 +204,6 @@ const FACTORIO_DATA = {
       "fullDescription": "Filter Helper is a mod for Factorio which adds a context aware panel to filter inserters, splitters, loaders, logistic chests, and filtered containers to quickly set filter contents. Simply click on a suggested item to add it as a filter. Right-click to remove the filter. Middle-click to get item as ghost (for use in conditions).",
       "unlockCooldownDays": 3,
       "modPortalUrl": "https://mods.factorio.com/mod/FilterHelper"
-    },
-    {
-      "modName": "Automatic_Train_Painter",
-      "modFileName": "Automatic_Train_Painter_2.0.1.zip",
-      "playerDifficultyCategory": "intermediate",
-      "factorioModPortalCategory": "Tweaks",
-      "factorioModPortalTags": ["Trains"],
-      "summaryDescription": "Auto-color trains by cargo",
-      "fullDescription": "Trains will automatically be colored, based on the contents of their inventory, as soon as they begin to move in Automatic Mode. Note: this requires the \"Use destination train stop color\" checkbox in the locomotive GUI to be unticked, otherwise the train will follow the new built-in destination stop coloring behavior. Item colors are based on their icons, while fluid colors are based on their appearance in pipes, storage tanks, and barrels. If a train's inventory contains multiple entities, their colors will be blended proportionally to the quantity of each entity present.",
-      "unlockCooldownDays": 7,
-      "modPortalUrl": "https://mods.factorio.com/mod/Automatic_Train_Painter"
     },
     {
       "modName": "QueueToFrontSE",
